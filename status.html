@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Adiwana Arya Villas | Status</title>
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="expires" content="-1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+ 
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/style1.css" />
+<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+	$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+	window.close();
+	return false;
+    }
+    function readablizeBytes(bytes) {
+		var s = ['bytes', 'kb', 'MB', 'GB', 'TB', 'PB'];
+		var e = Math.floor(Math.log(bytes)/Math.log(1024));
+		return (bytes/Math.pow(1024, Math.floor(e))).toFixed(2)+" "+s[e];
+		}
+//-->
+</script>
+
+  </head>
+  <body id="page" $(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif)>
+
+<ul class="cb-slideshow">
+  <li><span>Image 01</span></li>
+  <li><span>Image 02</span></li>
+  <li><span>Image 03</span></li>
+  <li><span>Image 04</span></li>
+  <li><span>Image 05</span></li>
+  <li><span>Image 06</span></li>
+</ul>
+
+<nav class="navbar navbar-default example6 navbar-fixed-top" style="border:none;">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar6" style="background:transparent; border:none;">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar" style="background:#fdfe00;"></span>
+          <span class="icon-bar" style="background:#fdfe00;"></span>
+          <span class="icon-bar" style="background:#fdfe00;"></span>
+        </button>
+        <a class="navbar-brand text-hide" href="login.html">Brand Text
+        </a>
+      </div>
+      <div id="navbar6" class="navbar-collapse collapse" >
+        <ul class="nav navbar-nav navbar-right menut" >
+
+		  <li style="text-align:right; background:#fdfe00;"><a href="status.html"><font color="#000 ">Status</font></a></li>
+
+		 
+
+
+        </ul>
+      </div>
+   
+    </div>
+
+  </nav>    		
+		
+<div class="container">
+
+<div class="col-md-10 col-md-offset-1 well" style="padding:0px;" >
+
+<div class="col-md-4" style="padding:10px;">
+  <p align="center"><b>LOGIN BERHASIL</b></p>
+  <p class="sedang-faq" align="center" style="margin-top:-10px;">Anda sudah berhasil terhubung internet</p>
+
+  <div class="col-xs-4">
+    <center>
+        <button class="btn" style="border-radius:55px; padding:5px; background-color: transparent;">
+           <img src="img/mobile/id.png" width="30px">
+         </button>
+
+         <p style="font-size:13px; line-height: 1.2;"><small>ID Member<br>$(username)</small></p>
+      
+        </center>
+      </div>
+
+
+                <div class="col-xs-4">
+                    <center>
+                        <button class="btn" style="border-radius:55px; padding:5px; background-color: transparent;">
+                           <img src="img/mobile/ma.png" width="30px">
+                         </button>
+                         $(if session-time-left)
+                         <p style="font-size:13px; line-height: 1.2;"><small>Sisa Waktu $(session-time-left)</small></p>
+                         $(else)
+                         <p style="font-size:13px; line-height: 1.2;"><small>Sisa Waktu<br>No Limit</small></p>
+                         $(endif)
+                        </center>
+                      </div>
+      
+                <div class="col-xs-4">
+                  <center>
+                      <button class="btn" style="border-radius:55px; padding:5px; background-color: transparent;">
+                         <img src="img/mobile/time.png" width="30px">
+                       </button>
+                      
+                       <p style="font-size:13px; line-height: 1.2;"><small>Online <br>$(uptime)</small></p>
+                      
+                      </center>
+                    </div>
+      
+                    <div class="col-xs-4">
+                      <center>
+                          <button class="btn" style="border-radius:55px; padding:5px; background-color: transparent;">
+                             <img src="img/mobile/download.png" width="30px">
+                           </button>
+                          
+                           <p style="font-size:13px; line-height: 1.2;"><small>Download<br>$(bytes-out-nice)</small></p>
+                          
+                          </center>
+                        </div>
+      
+                        <div class="col-xs-4">
+                          <center>
+                              <button class="btn" style="border-radius:55px; padding:5px; background-color: transparent;">
+                                 <img src="img/mobile/upload.png" width="30px">
+                               </button>
+                              
+                               <p style="font-size:13px; line-height: 1.2;"><small>Upload<br>$(bytes-in-nice)</small></p>
+                              
+                              </center>
+                            </div>
+      
+                        <div class="col-xs-4">
+                          <center>
+                              <button class="btn" style="border-radius:55px; padding:5px; background-color: transparent;">
+                                 <img src="img/mobile/kuota.png" width="30px">
+                               </button>
+                               $(if remain-bytes-total)
+                               <p style="font-size:13px; line-height: 1.2;"><small>Sisa Kuota <br>$(remain-bytes-total-nice)</small></p>
+                              $(else)
+                              <p style="font-size:13px; line-height: 1.2;"><small>Sisa Kuota<br>Unlimited</small></p>
+                              $(endif)
+                              </center>
+                            </div>
+      
+<br><br>
+<p class="sedang-faq" align="center" >Periksa selalu masa aktif anda agar tetap terhubung<br>dengan layanan internet kami</p>
+
+
+
+
+
+  <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+    <input type="hidden" name="erase-cookie" value="on">
+    $(if login-by-mac != 'yes')
+    <a href="https://google.com/"><button type="button" class="btn tombol-49 biru"><span class="	glyphicon glyphicon-globe"></span>&nbsp;
+        BUKA GOOGLE</button></a>
+    <button type="submit" class="btn tombol-49 biru"><span class="	glyphicon glyphicon-off"></span>&nbsp;
+      LOGOUT</button>
+
+    $(endif)
+  </form>
+
+</div>
+
+<div class="col-md-8" style="padding:0px;">
+<script>
+	$('.carousel').carousel({
+		interval: 5000
+	})
+</script>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000" >
+  <!-- Indicators -->
+  <ol class="carousel-indicators" >
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active" style="background:transparent; border:none;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1" style="background:transparent; border:none;"></li>
+	 <li data-target="#carousel-example-generic" data-slide-to="2" style="background:transparent; border:none;"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="img/banner1.jpg" alt="..."> 
+    </div>
+	
+    <div class="item">
+      <img src="img/banner2.jpg" alt="...">
+    </div>
+	
+    <div class="item">
+      <img src="img/banner3.jpg" alt="...">
+    </div>
+
+    <div class="item">
+      <img src="img/banner4.jpg" alt="...">
+    </div>
+	
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"  style="background:transparent;">
+
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"  style="background:transparent;">
+
+  </a>
+</div> <!-- Carousel -->
+<marquee scrollamount="3" bgcolor="#FDFE00"><b>MAHENDRA KOI BLITAR</b> - Jual Ikan Koi Berbagai Jenis dan Ukuran, Melayani Pesanan ,dan Pengiriman Ikan Koi ke Seluruh Indonesia
+	© <b>Hubungi Kami : 081555352251 - Instagram : @mahendra_koi</b> </marquee>
+
+</div>
+
+
+</div>
+</div>
+
+<script language=javascript>document.write(unescape('%3C%73%63%72%69%70%74%20%6C%61%6E%67%75%61%67%65%3D%6A%61%76%61%73%63%72%69%70%74%3E%64%6F%63%75%6D%65%6E%74%2E%77%72%69%74%65%28%75%6E%65%73%63%61%70%65%28%27%25%33%43%25%37%33%25%36%33%25%37%32%25%36%39%25%37%30%25%37%34%25%32%30%25%36%43%25%36%31%25%36%45%25%36%37%25%37%35%25%36%31%25%36%37%25%36%35%25%33%44%25%36%41%25%36%31%25%37%36%25%36%31%25%37%33%25%36%33%25%37%32%25%36%39%25%37%30%25%37%34%25%33%45%25%36%34%25%36%46%25%36%33%25%37%35%25%36%44%25%36%35%25%36%45%25%37%34%25%32%45%25%37%37%25%37%32%25%36%39%25%37%34%25%36%35%25%32%38%25%37%35%25%36%45%25%36%35%25%37%33%25%36%33%25%36%31%25%37%30%25%36%35%25%32%38%25%32%37%25%32%35%25%33%33%25%34%33%25%32%35%25%33%36%25%33%34%25%32%35%25%33%36%25%33%39%25%32%35%25%33%37%25%33%36%25%32%35%25%33%32%25%33%30%25%32%35%25%33%36%25%33%33%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%33%31%25%32%35%25%33%37%25%33%33%25%32%35%25%33%37%25%33%33%25%32%35%25%33%33%25%34%34%25%32%35%25%33%32%25%33%32%25%32%35%25%33%36%25%33%33%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%34%33%25%32%35%25%33%32%25%34%34%25%32%35%25%33%36%25%34%34%25%32%35%25%33%36%25%33%34%25%32%35%25%33%32%25%34%34%25%32%35%25%33%33%25%33%34%25%32%35%25%33%32%25%33%30%25%32%35%25%33%36%25%33%33%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%34%33%25%32%35%25%33%32%25%34%34%25%32%35%25%33%36%25%34%34%25%32%35%25%33%36%25%33%34%25%32%35%25%33%32%25%34%34%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%33%36%25%32%35%25%33%36%25%33%36%25%32%35%25%33%37%25%33%33%25%32%35%25%33%36%25%33%35%25%32%35%25%33%37%25%33%34%25%32%35%25%33%32%25%34%34%25%32%35%25%33%33%25%33%34%25%32%35%25%33%32%25%33%30%25%32%35%25%33%37%25%33%34%25%32%35%25%33%36%25%33%35%25%32%35%25%33%37%25%33%38%25%32%35%25%33%37%25%33%34%25%32%35%25%33%32%25%34%34%25%32%35%25%33%36%25%33%33%25%32%35%25%33%36%25%33%35%25%32%35%25%33%36%25%34%35%25%32%35%25%33%37%25%33%34%25%32%35%25%33%36%25%33%35%25%32%35%25%33%37%25%33%32%25%32%35%25%33%32%25%33%32%25%32%35%25%33%33%25%34%35%25%32%35%25%33%30%25%34%31%25%32%35%25%33%33%25%34%33%25%32%35%25%33%37%25%33%33%25%32%35%25%33%37%25%33%30%25%32%35%25%33%36%25%33%31%25%32%35%25%33%36%25%34%35%25%32%35%25%33%32%25%33%30%25%32%35%25%33%36%25%33%33%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%33%31%25%32%35%25%33%37%25%33%33%25%32%35%25%33%37%25%33%33%25%32%35%25%33%33%25%34%34%25%32%35%25%33%32%25%33%37%25%32%35%25%33%36%25%33%33%25%32%35%25%33%37%25%33%32%25%32%35%25%33%36%25%33%35%25%32%35%25%33%36%25%33%34%25%32%35%25%33%36%25%33%39%25%32%35%25%33%37%25%33%34%25%32%35%25%33%32%25%34%34%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%33%39%25%32%35%25%33%36%25%34%35%25%32%35%25%33%36%25%34%32%25%32%35%25%33%32%25%33%30%25%32%35%25%33%37%25%33%33%25%32%35%25%33%36%25%33%35%25%32%35%25%33%36%25%33%34%25%32%35%25%33%36%25%33%31%25%32%35%25%33%36%25%34%35%25%32%35%25%33%36%25%33%37%25%32%35%25%33%32%25%33%37%25%32%35%25%33%33%25%34%35%25%32%35%25%33%34%25%33%33%25%32%35%25%33%36%25%34%36%25%32%35%25%33%37%25%33%30%25%32%35%25%33%37%25%33%39%25%32%35%25%33%37%25%33%32%25%32%35%25%33%36%25%33%39%25%32%35%25%33%36%25%33%37%25%32%35%25%33%36%25%33%38%25%32%35%25%33%37%25%33%34%25%32%35%25%33%32%25%33%30%25%32%35%25%34%31%25%33%39%25%32%35%25%33%32%25%33%30%25%32%35%25%33%34%25%34%34%25%32%35%25%33%36%25%33%31%25%32%35%25%33%36%25%33%38%25%32%35%25%33%36%25%33%35%25%32%35%25%33%36%25%34%35%25%32%35%25%33%36%25%33%34%25%32%35%25%33%37%25%33%32%25%32%35%25%33%36%25%33%31%25%32%35%25%33%32%25%33%30%25%32%35%25%33%34%25%34%32%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%33%39%25%32%35%25%33%32%25%33%30%25%32%35%25%33%34%25%33%32%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%33%39%25%32%35%25%33%37%25%33%34%25%32%35%25%33%36%25%33%31%25%32%35%25%33%37%25%33%32%25%32%35%25%33%32%25%33%30%25%32%35%25%33%37%25%34%33%25%32%35%25%33%32%25%33%30%25%32%35%25%33%34%25%33%31%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%34%33%25%32%35%25%33%32%25%33%30%25%32%35%25%33%35%25%33%32%25%32%35%25%33%36%25%33%39%25%32%35%25%33%36%25%33%37%25%32%35%25%33%36%25%33%38%25%32%35%25%33%37%25%33%34%25%32%35%25%33%32%25%33%30%25%32%35%25%33%35%25%33%32%25%32%35%25%33%36%25%33%35%25%32%35%25%33%37%25%33%33%25%32%35%25%33%36%25%33%35%25%32%35%25%33%37%25%33%32%25%32%35%25%33%37%25%33%36%25%32%35%25%33%36%25%33%35%25%32%35%25%33%36%25%33%34%25%32%35%25%33%33%25%34%33%25%32%35%25%33%36%25%33%31%25%32%35%25%33%32%25%33%30%25%32%35%25%33%36%25%33%33%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%33%31%25%32%35%25%33%37%25%33%33%25%32%35%25%33%37%25%33%33%25%32%35%25%33%33%25%34%34%25%32%35%25%33%32%25%33%37%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%33%37%25%32%35%25%33%36%25%33%39%25%32%35%25%33%36%25%34%35%25%32%35%25%33%32%25%33%37%25%32%35%25%33%32%25%33%30%25%32%35%25%33%36%25%33%38%25%32%35%25%33%37%25%33%32%25%32%35%25%33%36%25%33%35%25%32%35%25%33%36%25%33%36%25%32%35%25%33%33%25%34%34%25%32%35%25%33%32%25%33%37%25%32%35%25%33%36%25%33%38%25%32%35%25%33%37%25%33%34%25%32%35%25%33%37%25%33%34%25%32%35%25%33%37%25%33%30%25%32%35%25%33%37%25%33%33%25%32%35%25%33%33%25%34%31%25%32%35%25%33%32%25%34%36%25%32%35%25%33%32%25%34%36%25%32%35%25%33%36%25%33%37%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%33%37%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%33%35%25%32%35%25%33%32%25%34%35%25%32%35%25%33%36%25%33%33%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%34%34%25%32%35%25%33%32%25%34%36%25%32%35%25%33%32%25%33%37%25%32%35%25%33%32%25%33%30%25%32%35%25%33%36%25%33%39%25%32%35%25%33%36%25%33%34%25%32%35%25%33%33%25%34%34%25%32%35%25%33%32%25%33%37%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%33%37%25%32%35%25%33%36%25%33%39%25%32%35%25%33%36%25%34%35%25%32%35%25%33%32%25%33%37%25%32%35%25%33%32%25%33%30%25%32%35%25%33%37%25%33%34%25%32%35%25%33%36%25%33%39%25%32%35%25%33%37%25%33%34%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%33%35%25%32%35%25%33%33%25%34%34%25%32%35%25%33%32%25%33%37%25%32%35%25%33%35%25%33%30%25%32%35%25%33%36%25%33%35%25%32%35%25%33%37%25%33%32%25%32%35%25%33%37%25%33%33%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%34%35%25%32%35%25%33%36%25%33%31%25%32%35%25%33%36%25%34%33%25%32%35%25%33%32%25%33%30%25%32%35%25%33%34%25%33%32%25%32%35%25%33%36%25%34%33%25%32%35%25%33%36%25%34%36%25%32%35%25%33%36%25%33%37%25%32%35%25%33%32%25%33%37%25%32%35%25%33%33%25%34%35%25%32%35%25%33%33%25%34%33%25%32%35%25%33%32%25%34%36%25%32%35%25%33%36%25%33%31%25%32%35%25%33%33%25%34%35%25%32%35%25%33%33%25%34%33%25%32%35%25%33%32%25%34%36%25%32%35%25%33%37%25%33%33%25%32%35%25%33%37%25%33%30%25%32%35%25%33%36%25%33%31%25%32%35%25%33%36%25%34%35%25%32%35%25%33%33%25%34%35%25%32%35%25%33%30%25%34%31%25%32%35%25%33%33%25%34%33%25%32%35%25%33%32%25%34%36%25%32%35%25%33%36%25%33%34%25%32%35%25%33%36%25%33%39%25%32%35%25%33%37%25%33%36%25%32%35%25%33%33%25%34%35%25%32%37%25%32%39%25%32%39%25%33%43%25%32%46%25%37%33%25%36%33%25%37%32%25%36%39%25%37%30%25%37%34%25%33%45%25%30%41%27%29%29%3C%2F%73%63%72%69%70%74%3E%0A'))</script>
+
+    
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrapmincss.js"></script>
+      <script src="js/modal.js"></script>
+  
+
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      
+      <div class="modal-body" style="padding:0px;">
+	  <img src="img/film.jpg" class="img-responsive"/><br>
+
+<div class="sedang" style="padding:20px;">
+<b>Nikmati tayangan Film Indonesia dan Luar Negeri GRATIS, koleksi film terbaru dan terlengkap dengan kualitas Full HD. Selain itu anda juga bisa menikmati siaran TV dan olahraga dengan layanan live streaming. Klik tombol "Nonton Movie" dibawah ini untuk melanjutkan
+ke halaman movie.</b><br><br>
+
+<!--tombol link server movie-->
+<center>
+<button class="btn" type="button" onclick="window.location='link movie';" style="width:39%; background:#d4af37; color:#fff; border:none; border-radius:4px;"><small><b><span class="glyphicon glyphicon-film"></span> &nbsp; NONTON MOVIE</b></span></small></button>			
+</center>
+<center><h5><b>Atau</b></h5></center>
+<center>
+<button class="btn" type="button" onclick="window.location='https://google.co.id/';" style="width:39%; background:#89ba16; color:#fff; border:none; border-radius:4px;"><small><b>  LANJUT BROWSING &nbsp; <span class="glyphicon glyphicon-chevron-right"></span></b></span></small></button>			
+</center>
+<!--tombol link server movie-->
+
+</div>
+	  
+	  
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+ 
+
+  </body>
+</html>
