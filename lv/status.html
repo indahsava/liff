@@ -75,7 +75,7 @@ $(elif login-by != 'mac')
 	<br><div style="text-align: center;">Sveiks $(username)!</div><br>
 $(endif)
 	<tr><td align="right">IP adrese:</td><td>$(ip)</td></tr>
-	<tr><td align="right">baiti prom/Ã°urp:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+	<tr><td align="right">baiti prom/ðurp:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
 $(if session-time-left)
 	<tr><td align="right">ilgums / atlicis:</td><td>$(uptime) / $(session-time-left)</td></tr>
 $(else)
@@ -83,15 +83,15 @@ $(else)
 $(endif)
 $(if blocked == 'yes')
 	<tr><td align="right">statuss:</td><td><div style="color: #FF8080">
-nepiecieÃ°ama <a href="$(link-advert)" target="hotspot_advert">reklÃ¢ma</a></div></td>
+nepiecieðama <a href="$(link-advert)" target="hotspot_advert">reklâma</a></div></td>
 $(elif refresh-timeout)
-	<tr><td align="right">intervÃ¢ls:</td><td>$(refresh-timeout)</td>
+	<tr><td align="right">intervâls:</td><td>$(refresh-timeout)</td>
 $(endif)
 
 </table>
 $(if login-by-mac != 'yes')
 <br>
-<input type="submit" value="atslÃ§gties">
+<input type="submit" value="atslçgties">
 $(endif)
 </form>
 </td>
