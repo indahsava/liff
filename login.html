@@ -31,7 +31,6 @@
 			
 			</ul>
 
-
  $(if chap-id)
 	<form name="sendin" action="$(link-login-only)" method="post">
 		<input type="hidden" name="username" />
@@ -93,73 +92,21 @@ $(endif)
 
 <!--logo-->
 <img src="img/logo.png" class="img-responsive" style="margin-bottom:10px;"/>
-<center><div class="sedang" style="margin-bottom:5px;">Please enter your login access to connect the internet.</div>
+<center><div class="sedang" style="margin-bottom:5px;">Please enter your login access to connect the creator.</div>
 </center>
 <!--tutup logo-->
 
-
-$(if error)
-<div style="color:#DF1A23; font-weight:bold; margin-bottom:5px;" class="kecil">
-	<script type="text/javascript">
-		var error = "$(error)";
-		var error1 = "user $(username) has reached uptime limit";
-		var error2 = "invalid password";
-		var error3 = "no valid profile found";
-		var error4 = "user &lt;$(username)&gt; not found";
-		var error5 = "no more sessions are allowed for user $(username)";
-		var error6 = "session limit reached ($(error-orig))";
-		var error7 = "web browser did not send challenge response (try again, enable JavaScript)";
-		var error8 = "invalid username or password";
-		var error9 = "user $(username) is not allowed to log in from this MAC address";
-		var error10 = "simultaneous session limit reached";
-		var error11 = "user $(username) has reached traffic limit";
-		var error12 = "uptime limit reached";
-		var error13 = "invalid Calling-Station-Id";
-
-
-
-		if (error == error1) {
-			window.location.href = "expired.html";
-		} else if (error == error2) {
-			window.location.href = "exinvalid.html";
-		} else if (error == error3) {
-			window.location.href = "exnotfound.html";
-		} else if (error == error4) {
-			window.location.href = "exnotfound.html";
-		} else if (error == error5) {
-			window.location.href = "exterpakai.html";
-		} else if (error == error6) {
-			window.location.href = "exterpakai.html";
-		} else if (error == error7) {
-			window.location.href = "exbrowser.html";
-		} else if (error == error8) {
-			window.location.href = "exinvalid.html";
-		} else if (error == error9) {
-			window.location.href = "exmac.html";
-		} else if (error == error10) {
-			window.location.href = "exterpakai.html";
-		} else if (error == error11) {
-			window.location.href = "exkuota.html";
-		} else if (error == error12) {
-			window.location.href = "expired.html";
-		} else if (error == error13) {
-			window.location.href = "excalling.html";
-		} else {
-			document.write("$(error)");
-		}
-	</script>
-</div>
-$(endif) 
-
-
-
+<!-- Musik --> 
+                          <center> 
+                           <audio src="img/musik.mp3" autoplay="" controls=""></audio>
+                          </center> 
 <!--Login-->
 <form name="login" action="$(link-login-only)" method="post"
 					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
 						<input type="hidden" name="dst" value="$(link-orig)" />
 						<input type="hidden" name="popup" value="true" />
 						
-	<input type="text" class="form-control kolom-input" name="username" autocomplete="off" placeholder="USERNAME" value="$(username)" >
+	<input type="text" class="form-control kolom-input" name="username" autocomplete="off" placeholder="USERNAME" >
 	<input type="password" class="form-control kolom-input" name="password" placeholder="PASSWORD">
 
 <button type="submit" class="btn tombol-49 biru"><small><b><span class="glyphicon glyphicon-gift"></span>&nbsp; FREE TRIAL</b></small></button>
@@ -233,15 +180,9 @@ Jl. Karto Darmo, Ds. Jimbe, Kc. Kademangan, BLITAR
 
   </a>
 </div> <!-- Carousel -->
- 
-<marquee scrollamount="3" bgcolor="#FDFE00"><b>NEVAN SAVA</b> - (melayani pemasangan selfbot,vip,baju,berbagai Jenis dan Ukuran,Pengiriman ke Seluruh Indonesia
-	© <b>Hubungi Kami : 085790498762 - Instagram : @nevan sava</b> </marquee>
-
-
+ <marquee scrollamount="3" bgcolor="#808080"><b>OPEN ORDER</b> - pemasangan selfbot,protect room,vip smule,songgbok,coin line,baju berbagai Jenis dan Ukuran,Dll.Pengiriman ke Seluruh Indonesia
+	© <b>Hubungi Kami : 085790498762 - Instagram : @nevan_sava</b> </marquee>
  </div>
-
-
-
 
 </div> </div>
 
