@@ -20,7 +20,6 @@
 
   </head>
 
-  
   <body id="page">
 			<ul class="cb-slideshow">
 					<li><span>Image 01</span></li>
@@ -51,12 +50,6 @@
 	//-->
 	</script>
 $(endif)  
-
-
-
-
-
-  
 <nav class="navbar navbar-default example6 navbar-fixed-top" style="border:none;">
     <div class="container">
       <div class="navbar-header">
@@ -91,15 +84,18 @@ $(endif)
 <div class="col-lg-4" style="padding:10px;">
 
 <!--logo-->
-<img src="img/logo.png" class="img-responsive" style="margin-bottom:10px;"/>
-<center><div class="sedang" style="margin-bottom:5px;">Please enter your login access to connect the creator.</div>
-</center>
+</center> 
+          <marquee direction="left"> 
+           <span style="color:#000000"> <img src="img/5.png" width="50" height="50">&nbsp; 🅆🄴🄻🄲🄾🄼🄴 🅃🄾 🄼🅈 🅂🄸🅃🄴</span>&nbsp; 
+           <img src="img/5.png" width="50" height="50"> 
+          </marquee>
 <!--tutup logo-->
-
 <!-- Musik --> 
                           <center> 
                            <audio src="img/musik.mp3" autoplay="" controls=""></audio>
-                          </center> 
+                          </center>
+                          <center><div class="sedang" style="margin-bottom:5px;">Please enter your login access to connect the creator.</div>
+</center>
 <!--Login-->
 <form name="login" action="$(link-login-only)" method="post"
 					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
@@ -111,6 +107,7 @@ $(endif)
 
 <button type="submit" class="btn tombol-49 biru"><small><b><span class="glyphicon glyphicon-gift"></span>&nbsp; FREE TRIAL</b></small></button>
 <button type="submit" class="btn tombol-49 biru"><small><b><span class="glyphicon glyphicon-log-in"></span>&nbsp; LOGIN</b></small></button>
+
 
 
 </form>
